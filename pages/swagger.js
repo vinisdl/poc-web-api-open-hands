@@ -28,7 +28,13 @@ const swaggerDocument = {
                 type: "object",
                 properties: {
                   action: { type: "string" },
-                  message: { type: "object" },
+                  message: {
+                    type: "object",
+                    properties: {
+                      id: { type: "integer" },
+                      message: { type: "string", example: "do anything" }
+                    }
+                  },
                   conversationId: { type: "string" }
                 },
                 required: ["action"]
